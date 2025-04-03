@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>George Arogo Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">George Arogo Portfolio<span>.</span></div>
+        <nav>
+            <a onclick="showAboutSection()">About Me</a>
+            <a onclick="showProjects()">Projects</a>
+            <a onclick="showContactForm()">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- About Section -->
+        <div id="about-section">
+            <div class="about-section">
+                <div class="profile-header">
+                    <img src="assets/images/passport-photo.jpg" alt="George Arogo" class="profile-image">
+                    <div class="profile-intro">
+                        <h1>George Arogo</h1>
+                        <p class="tagline">Data Analyst | Problem Solver</p>
+                    </div>
+                </div>
+                
+                <div class="profile-content">
+                    <div class="profile-summary">
+                        <h2>About Me</h2>
+                        <p>I am passionate about leveraging technology especially data science and analytics to solve real world problems. My focus is on applying data driven solutions across diverse industries, aiming to drive innovation and create meaningful societal impact.</p>
+                        <p>With a unique blend of procurement expertise and technical analytics skills, I thrive at the intersection of business and technology, transforming raw data into actionable insights that drive strategic decisions.</p>
+                    </div>
+                </div>
+                
+                <div class="skills-section">
+                    <h2>My Skills</h2>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <h3><span class="emoji">📊</span> Power BI</h3>
+                            <p>Designing interactive dashboards and reports to visualize data effectively.</p>
+                        </div>
+                        <div class="skill-item">
+                            <h3><span class="emoji">📈</span> Excel</h3>
+                            <p>Advanced data analysis, pivot tables, and automation using macros.</p>
+                        </div>
+                        <div class="skill-item">
+                            <h3><span class="emoji">💾</span> SQL</h3>
+                            <p>Writing complex queries to extract, manipulate, and analyze data from databases.</p>
+                        </div>
+                        <div class="skill-item">
+                            <h3><span class="emoji">🐍</span> Python</h3>
+                            <p>Performing data cleaning, analysis, and visualization using libraries like Pandas and Matplotlib.</p>
+                        </div>
+                        <div class="skill-item">
+                            <h3><span class="emoji">📊</span> Tableau</h3>
+                            <p>Creating visually appealing dashboards to uncover insights and trends.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="education-section">
+                <h2>Education Background</h2>
+                <h3>Education</h3>
+                <div class="education-item">
+                    <p class="degree">Bachelor of Science in Procurement and Contract Management</p>
+                    <p class="institution">Jomo Kenyatta University of Agriculture and Technology (JKUAT)</p>
+                </div>
+                <div class="education-item">
+                    <p class="degree">Diploma in Mechanical Engineering</p>
+                    <p class="institution">Kenya School of TVET</p>
+                </div>
+            </div>
+            
+            <div class="certifications-section">
+                <h3>Certifications</h3>
+                <div class="certification-item">
+                    <p class="certification-name">Data Analytics Essentials</p>
+                    <p class="certification-issuer">Cisco Networking Academy</p>
+                </div>
+                <div class="certification-item">
+                    <p class="certification-name">Dashboarding & Data Visualization Intensive</p>
+                    <p class="certification-issuer">ENTERPRISE DNA</p>
+                </div>
+                <div class="certification-item">
+                    <p class="certification-name">Beginner's Guide to DAX</p>
+                    <p class="certification-issuer">ENTERPRISE DNA</p>
+                </div>
+                <div class="certification-item">
+                    <p class="certification-name">Beginner's Guide to Power BI</p>
+                    <p class="certification-issuer">ENTERPRISE DNA</p>
+                </div>
+            </div>
+        </div>
+        <!-- Resume Download Button -->
+        <div class="resume-download">
+            <a href="assets/documents/arogo-cv.pdf" class="download-btn" download>Download Resume</a>
+        </div>
+
+        <!-- Projects Section -->
+        <div id="projects-section" style="display:none;">
+            <h1>Projects</h1>
+            
+            <!-- Project 1: Aurora Bank Dashboard -->
+            <div class="project">
+                <div class="project-number">01</div>
+                <h2>Aurora Bank Insights</h2>
+                <div class="project-content-wrapper">
+                    <div class="project-image-container">
+                        <img src="assets/images/aurora-bank-dashboard.png" alt="Aurora Bank Dashboard Screenshot" 
+                             class="project-thumbnail"
+                             onclick="zoomImage(this)"
+                             data-fullsize="assets/images/aurora-bank-dashboard.png">
+                        <div class="image-expand-hint">Click to expand</div>
+                    </div>
+                    <div class="project-description">
+                        <p>The Aurora Bank Data Challenge focuses on leveraging customer, transaction, and card data to drive data-driven decision-making. The mission is divided into two key analytical directions:</p>
+                        <ul>
+                            <li>Customer Profiling & Segmentation</li>
+                            <li>Transaction and Risk Analysis</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="project-link" onclick="showSingleProject('project1')">View Project Details</a>
+            </div>
+            
+            <!-- Project 2: Inventory Management Dashboard -->
+            <div class="project">
+                <div class="project-number">02</div>
+                <h2>Inventory Management Insights</h2>
+                <div class="project-content-wrapper">
+                    <div class="project-image-container">
+                        <img src="assets/images/inventory-management-dashboard.png" alt="Inventory Management Dashboard Screenshot" 
+                             class="project-thumbnail"
+                             onclick="zoomImage(this)"
+                             data-fullsize="assets/images/inventory-management-dashboard.png">
+                        <div class="image-expand-hint">Click to expand</div>
+                    </div>
+                    <div class="project-description">
+                        <p>This dashboard provides comprehensive visibility into inventory operations, helping optimize stock levels and reduce carrying costs through key analytical directions:</p>
+                        <ul>
+                            <li>Inventory Valuation</li>
+                            <li>Stock Optimization</li>
+                            <li>Restocking Analysis</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="project-link" onclick="showSingleProject('project2')">View Project Details</a>
+            </div>
+            
+            <!-- Project 3: Data Professional Survey Breakdown -->
+            <div class="project">
+                <div class="project-number">03</div>
+                <h2>Data Professional Survey Breakdown</h2>
+                <div class="project-content-wrapper">
+                    <div class="project-image-container">
+                        <img src="assets/images/data-professional-survey.png" alt="Data professional survey" 
+                             class="project-thumbnail"
+                             onclick="zoomImage(this)"
+                             data-fullsize="assets/images/data-professional-survey.png">
+                        <div class="image-expand-hint">Click to expand</div>
+                    </div>
+                    <div class="project-description">
+                        <p>This project aims to analyze survey data from data professionals to uncover insights into their career paths, job satisfaction, compensation, and priorities within the industry.</p>
+                    </div>
+                </div>
+                <a href="#" class="project-link" onclick="showSingleProject('project3')">View Project Details</a>
+            </div>
+            
+            <!-- Project 4: Electronic Sales Dashboard -->
+            <div class="project">
+                <div class="project-number">04</div>
+                <h2>Electronic Sales Dashboard</h2>
+                <div class="project-content-wrapper">
+                    <div class="project-image-container">
+                        <img src="assets/images/electronic-sales-dashboard.png" alt="Electronic Sales Dashboard Screenshot" 
+                             class="project-thumbnail"
+                             onclick="zoomImage(this)"
+                             data-fullsize="assets/images/electronic-sales-dashboard.png">
+                        <div class="image-expand-hint">Click to expand</div>
+                    </div>
+                    <div class="project-description">
+                        <p>The Electronic Sales Dashboard project aims to provide a comprehensive view of sales performance across different customer and product segments.</p>
+                    </div>
+                </div>
+                <a href="#" class="project-link" onclick="showSingleProject('project4')">View Project Details</a>
+            </div>
+        </div>
+        
+        <!-- Single Project View -->
+        <div id="single-project" style="display: none;">
+            <a href="#" class="back-to-projects" onclick="showProjects()">Back to Projects</a>
+            
+            <!-- Project 1 Detailed View -->
+            <div id="project1" class="project-detail" style="display: none;">
+                <h2>Aurora Bank Insights</h2>
+                <div class="project-content-wrapper">
+                    <div class="project-image-container">
+                        <img src="assets/images/aurora-bank-dashboard.png" alt="Aurora Bank Dashboard Screenshot" 
+                             class="project-thumbnail"
+                             onclick="zoomImage(this)"
+                             data-fullsize="assets/images/aurora-bank-dashboard.png">
+                        <div class="image-expand-hint">Click to expand</div>
+                    </div>
+                    <div class="project-description">
+                        <p>The Aurora Bank Data Challenge focuses on leveraging customer, transaction, and card data to drive data-driven decision-making. The mission is divided into two key analytical directions:</p>
+                        
+                        <h3>1. Customer Profiling & Segmentation:</h3>
+                        <ul>
+                            <li>Analyze customer demographics (age, gender, location) to tailor marketing strategies</li>
+                            <li>Assess credit scores and their influencing factors (income, debt, age)</li>
+                            <li>Evaluate financial health using metrics like debt-to-income ratios</li>
+                            <li>Study card ownership and usage trends</li>
+                        </ul>
+                        
+                        <h3>2. Transaction and Risk Analysis:</h3>
+                        <ul>
+                            <li>Examine spending patterns by merchant categories</li>
+                            <li>Track geographical trends in transactions</li>
+                            <li>Monitor transaction errors to improve user experience</li>
+                            <li>Flag high-value transactions for fraud detection</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2 Detailed View -->
+            <div id="project2" class="project-detail" style="display: none;">
+                <h2>Inventory Management Insights</h2>
+                <div class="project-content-wrapper">
+                    <div class="project-image-container">
+                        <img src="assets/images/inventory-management-dashboard.png" alt="Inventory Management Dashboard Screenshot" 
+                             class="project-thumbnail"
+                             onclick="zoomImage(this)"
+                             data-fullsize="assets/images/inventory-management-dashboard.png">
+                        <div class="image-expand-hint">Click to expand</div>
+                    </div>
+                    <div class="project-description">
+                        <p>This dashboard provides comprehensive visibility into inventory operations, helping optimize stock levels and reduce carrying costs.</p>
+                        
+                        <h3>Key Analytical Directions:</h3>
+                        <ul>
+                            <li><strong>Inventory Valuation:</strong> Track total inventory value across product categories</li>
+                            <li><strong>Stock Optimization:</strong> Analyze stock quantities vs sales patterns</li>
+                            <li><strong>Restocking Analysis:</strong> Calculate optimal reorder points</li>
+                            <li><strong>Product Performance:</strong> Compare sales velocity across categories</li>
+                        </ul>
+                        
+                        <h3>Notable Insights:</h3>
+                        <ul>
+                            <li>Top-selling items (Concrete: 667 units) vs slow-moving inventory</li>
+                            <li>High-value items (Artificial Stone: $92,220) requiring monitoring</li>
+                            <li>Total inventory value of $2,191,269 with category breakdown</li>
+                            <li>Discrepancies between stock levels and sales patterns</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3 Detailed View -->
+            <div id="project3" class="project-detail" style="display: none;">
+                <h2>Data Professional Survey Breakdown</h2>
+                <div class="project-content-wrapper">
+                    <div class="project-image-container">
+                        <img src="assets/images/data-professional-survey.png" alt="data professional survey" 
+                             class="project-thumbnail"
+                             onclick="zoomImage(this)"
+                             data-fullsize="assets/images/data-professional-survey.png">
+                        <div class="image-expand-hint">Click to expand</div>
+                    </div>
+                    <div class="project-description">
+                        <h3>Project description:</h3>
+                        <p>This project aims to analyze survey data from data professionals to uncover insights into their career paths, job satisfaction, compensation, and priorities within the industry. By examining responses on role titles, career transitions, salary ranges, industry representation, and various aspects of job satisfaction (such as work/life balance and growth opportunities), this project seeks to provide a comprehensive view of the experiences and motivations of data professionals. Additionally, demographic details like age, gender, and country add depth to the analysis.</p>
+                        
+                        <h3>Goals:</h3>
+                        <ul>
+                            <li>Identify Career Trends: Understand the most common job titles, industries, and demographics among data professionals.</li>
+                            <li>Evaluate Job Satisfaction: Explore satisfaction levels across factors like salary, work/life balance, coworkers, and upward mobility.</li>
+                            <li>Uncover Career Transition Insights: Assess how many professionals switched into data from other fields and the challenges they faced.</li>
+                            <li>Highlight Job Search Priorities: Determine what factors (e.g., salary, growth opportunities) are most important to data professionals when considering new positions.</li>
+                        </ul>
+                        
+                        <h3>Download Data:</h3>
+                        <a href="assets/documents/data-professional-survey.xlsx" download class="project-link">Download Excel Data</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 4 Detailed View -->
+            <div id="project4" class="project-detail" style="display: none;">
+                <h2>Electronic Sales Dashboard</h2>
+                <div class="project-content-wrapper">
+                    <div class="project-image-container">
+                        <img src="assets/images/electronic-sales-dashboard.png" alt="Electronic Sales Dashboard Screenshot" 
+                             class="project-thumbnail"
+                             onclick="zoomImage(this)"
+                             data-fullsize="assets/images/electronic-sales-dashboard.png">
+                        <div class="image-expand-hint">Click to expand</div>
+                    </div>
+                    <div class="project-description">
+                        <p>The Electronic Sales Dashboard project aims to provide a comprehensive view of sales performance across different customer and product segments.</p>
+                        
+                        <h3>Project Goals:</h3>
+                        <ul>
+                            <li><strong>Identify High-Performing Products:</strong> Pinpoint which product categories contribute most to revenue and profit.</li>
+                            <li><strong>Understand Customer Demographics:</strong> Analyze sales data by age, gender, and loyalty status to reveal customer preferences.</li>
+                            <li><strong>Monitor Sales Trends Over Time:</strong> Track average order value trends to identify seasonal patterns or peak sales periods.</li>
+                            <li><strong>Optimize Marketing and Inventory:</strong> Use insights to better target marketing efforts and manage stock levels efficiently.</li>
+                        </ul>
+                        
+                        <h3>Download Data:</h3>
+                        <a href="assets/documents/electronic-sales-data.xlsx" download class="project-link">Download Excel Data</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <!-- Contact Section -->
+        <div id="contact-section" class="contact-form" style="display: none;">
+            <h1>Get in touch.</h1>
+            <form id="contact-form" action="https://formspree.io/f/xblgazzv" method="POST" onsubmit="clearForm(event)">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required rows="5"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Image Zoom Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="zoomedImage">
+    </div>
+    
+    <footer>
+        <div class="footer-logo">
+          <img src="https://cdn.prod.website-files.com/67e7b0fa7a5b055f684eabd4/67e7b0fa7a5b055f684eac7e_logo.png" width="147" alt="Portfolio Logo">
+        </div>
+        <div class="footer-links">
+            <a href="https://x.com/ArogoGeorge" target="_blank">Twitter</a>
+            <a href="https://www.linkedin.com/in/george-okullo/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Aro-geo" target="_blank">GitHub</a>
+        </div>
+        <div class="footer-copyright">
+            &copy; 2025 George Arogo. All rights reserved.
+        </div>
+    </footer>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
+</body>
+</html>
