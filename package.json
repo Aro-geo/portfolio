@@ -1,0 +1,23 @@
+{
+  "name": "george-arogo-portfolio",
+  "version": "1.0.0",
+  "description": "Modern AI & Web Developer Portfolio for George Arogo",
+  "main": "portfolio/index.html",
+  "scripts": {
+    "dev": "cd portfolio && npx http-server -p 3000 -o",
+    "start": "cd portfolio && npx http-server -p 3000 -o",
+    "build": "echo 'Static site - no build needed'",
+    "preview": "cd portfolio && python3 -m http.server 4173"
+  },
+  "keywords": [
+    "portfolio",
+    "ai",
+    "web-development",
+    "data-analytics",
+    "power-bi"
+  ],
+  "author": "George Arogo",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
